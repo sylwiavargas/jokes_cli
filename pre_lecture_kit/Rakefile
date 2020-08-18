@@ -7,7 +7,7 @@ task :c do
   Pry.start
 end
 
-desc "run our app"
-task :start do 
+desc "starts the app"
+task :jokes do 
   JokeApp.new.run
 end

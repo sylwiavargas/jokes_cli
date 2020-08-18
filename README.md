@@ -11,7 +11,7 @@
 User -< UserJoke >- Joke
 
 ### Get started
-0. `cd pre_lecture_kit` and open in VS Code
+0. **IMPORTANT**: `cd pre_lecture_kit` and open in VS Code
 1. Bring gems: `bundle`
 2. Run migrations: run `rake db:migrate`
 3. Load seeds: run `rake db:seed`
@@ -22,7 +22,7 @@ User -< UserJoke >- Joke
 8. Start the app through a rake task (check `rake -T`): 
 - go through it once to see how stuff connects 
 - and then second to **try to break it**
-9. Now, read the code and see how things connect:
+9. Now, read the code and see try to understand how things connect -- read it carefully, **do not give up if the syntax feels foreign** (ask a peer, ask in the cohort channel):
 - `app/joke_app.rb`
 - `app/models/joke.rb`
 - `app/models/user.rb`
@@ -30,4 +30,8 @@ User -< UserJoke >- Joke
 - `app/tools/themes.rb`
 - `app/tools/cli_controls.rb`
 - `app/tools/colors.rb`
+**FEEL FREE TO EXPLORE IT: put a `binding.pry` wherever you want!**
 10. Write down all your questions.
+
+## Read more
+- read Erik the Dad's blog [on ancestry, inheritance and modules in Ruby](https://medium.com/@hyeokjungkim/ruby-ancestry-d7f5d808e7d7)
