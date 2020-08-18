@@ -30,7 +30,9 @@ User -< UserJoke >- Joke
 - `app/tools/themes.rb`
 - `app/tools/cli_controls.rb`
 - `app/tools/colors.rb`
+
 **FEEL FREE TO EXPLORE IT: put a `binding.pry` wherever you want!**
+
 10. Write down all your questions.
 
 ## Read more
