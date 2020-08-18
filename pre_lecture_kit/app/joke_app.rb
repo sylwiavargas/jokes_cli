@@ -37,10 +37,10 @@ class JokeApp
 
   def get_joke(subject)    
     system 'clear'
-    # find a joke that contains subject
-    jokes_arr = Joke.where("content LIKE ?", "%" + subject + "%")
-    # if the response is empty or not:
-    jokes_arr.empty? ? no_jokes_available : joke_available(jokes_arr.sample)
+    # get a random joke or find a joke that contains subject
+    subject.downcase == "random" ? joke = Joke.all.sample : joke = Joke.where("content LIKE ?", "%" + subject + "%").sample
+    # if the response is nil or not:
+    joke.nil? ? no_jokes_available : joke_available(joke)
     # ask if to show another joke
     another_one?
   end
