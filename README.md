@@ -11,6 +11,7 @@
 User -< UserJoke >- Joke
 
 ### Get started
+0. `cd pre_lecture_kit` and open in VS Code
 1. Bring gems: `bundle`
 2. Run migrations: run `rake db:migrate`
 3. Load seeds: run `rake db:seed`
