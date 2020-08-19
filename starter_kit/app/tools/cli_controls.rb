@@ -22,5 +22,4 @@ module CliControls
     end
 
     $next_joke_arr = ["Wanna hear another one?", "Wanna one more?", "Wanna more laughs?"]
-    $returned_jokes = []
 end
