@@ -23,11 +23,4 @@ u1.jokes << j3
 u1.jokes.push(j4, j2)
 ### and if you want to push a couple of instances at the same time, use '.push'
 
-DadJokesScraper.crawl!
-$returned_jokes.each do |joke|
-    content = joke.text
-    Joke.create(content: content)
-    puts "🤣 🤣 🤣  #{content} 🤣 🤣 🤣 "
-end 
-
 puts " 🤡 🤡 🤡 DONE DONE DONE 🤡 🤡 🤡 "
