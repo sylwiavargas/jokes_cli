@@ -37,7 +37,7 @@
 - Black Mirror accent
 
 ## Spider quiz:
-- `brew cask install chromedriver`
+- `brew cask install chromedriver` (or, if that errors out: `brew install chromedriver`)
 - `cd ./starter_kit`
 - `rake spider`
 - in breakout rooms, discuss and fill out the prompts and general code organization
