@@ -8,6 +8,8 @@
 - [Easy definitions 📖](#easy-definitions)
 - [Dad Jokes API 🤡](#dad-jokes-api)
 - [More APIs 👾](#more-apis)
+- [Pseudocoding requests 💻](#pseudocoding-requests)
+- [Pseudocoding scraping 🖥](#pseudocoding-scraping)
 - [Read more 🤓](#read-more)
 
 ---
@@ -87,6 +89,64 @@ User -< UserJoke >- Joke
 - [More APIs](https://rapidapi.com/collection/cool-apis)
 - [And even more APIs](https://medium.com/@vicbergquist/18-fun-apis-for-your-next-project-8008841c7be9)
 
+## Pseudocoding requests
+1. parse the URL
+    ```ruby
+        uri = URI.parse(url)
+    ```
+2. save the request to a variable
+    ```ruby
+        request = Net::HTTP::Get.new(uri)
+    ```
+3. if the documentation requires it, set an accept header to text/plain
+    ```ruby
+        request["Accept"] = "text/plain"
+    ```
+4. if the documentation requires it, set options to a hash with the ssl key
+    ```ruby
+        req_options = {
+        use_ssl: uri.scheme == "https",
+        }
+    ```
+5. now, parse the response to our request
+    ```ruby
+        response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+            http.request(request)
+        end
+    ```
+
+6. See what you're getting:
+    ```ruby
+        resp = response.body
+    ```
+
+## Pseudocoding scraping
+1. Add 'kimurai' gem in the gemfile (and bundle)
+2. Create a scraper Class that inherits from 'Kimurai::Base'
+    ```ruby
+        class DadJokesScraper < Kimurai::Base
+        end
+    ```
+3. Each scraper needs these elements:
+    ```ruby
+        class DadJokesScraper < Kimurai::Base
+            @@base_url = "https://www.countryliving.com/life/a27452412/best-dad-jokes/"
+            @name= 'dad_jokes'
+            @start_urls = [@@base_url]
+            @engine = :selenium_chrome
+
+            def parse(response, url:, data: {})
+                #code for what to do with the website
+            end
+        end
+    ```
+4. Use kimurai methods to do the job, e.g.:
+    - `browser.current_response` - to access the html of the page in the base url
+    - `doc.css()` - to find html/css element(s) in that html (it needs a css selector as an arg)
+    - `browser.find()` - to find a specific element, using an xpath (check my code, my blog or the docs to learn about it)
+    - `browser.fill_in` - if you want to fill in a form (check my code or docs to learn about the args)
+    - `click` - if you want to click on something
+    - `browser.save_screenshot` - if you want to see how the job is being done
 
 ## Read more
 - Sylwia's patient [web scraping walkthrough](https://www.scrapingbee.com/blog/web-scraping-ruby/)
