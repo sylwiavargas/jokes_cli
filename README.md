@@ -39,7 +39,7 @@
 - in breakout rooms, discuss and fill out the prompts and general code organization
 - do not close the CLI, just follow the prompts
 
-### Domain model
+## Domain model
 ![](jokeApp.png)
 User -< UserJoke >- Joke
 
@@ -52,20 +52,31 @@ User -< UserJoke >- Joke
 * **Server:** the destination of the request
 * **API:**
 > Suppose you're the HR manager of a company, and Mr. XYZ has applied to your company. In his resume, he has stated that he achieved the highest score in the subjects "Machine Learning" and "Natural Language Processing" while pursuing his bachelors in Computer Science.
+
 > Before you hire him, you want to verify Mr. XYZ's claims. I am the registrar of the university that awarded the bachelor's degree to Mr. XYZ. I keep all the records of students' marks and grades.
+
 > One option before me is to make my entire student database publicly available, so that prospective employers can do a background check on my students. However, this poses many problems:
+
 > **Privacy:** Most students won't like the details of all their grades being made public. The professors are also worried that the other universities will analyze the database, and poach the most brilliant students in every area for their own research programmes.
+
 > **Security:** The schema of my database will be publicly available, and might help the hackers to easily exploit security vulnerabilities in the various university applications that use this database.
+
 > **Complexity for you:** You will have to spend a lot of time understanding the database structure and finding out the records of Mr. XYZ and his batchmates, and then comparing the grades to confirm that Mr. XYZ was awarded the highest score in the specified subjects
+
 > **Complexity for me:** There are hundreds of employers who will overwhelm me with thousands of different types of queries.
+
 >So, I've a solution. I make available a standard form, which lists what kind of information is available to the employers wanting to do background checks on my students. I also list the information that you need to provide for each type of query. For example:
 > - The query "Did this student score the highest marks in the specified subject?" requires you to give me subject name, student name, degree name and year
 > - The query "Was this student awarded a Master's degree in Electrical Engineering from your university?" If yes, what was his CGPA?" requires you to give me student name, degree name and year.
 
 > I may also list some requirements you need to satisfy before you can apply for access to this information (e.g. Bring your company ID card to prove you're a legit HR manager, or a processing fee of $10).
+
 > This standard form is the API. The requirement of company ID card or processing fee is an API key. If you've the API key, you can give me some details (e.g. student name, degree) and get corresponding information for it (e.g. CGPA or "No such student exists in our records.")
+
 > A system's API allows the API user to avoid the hassle of understanding the complex system fully. It also allows the API publisher to make certain information accessible to others in a standard way, without compromising the security, privacy or confidentiality of the system.
+
 > For example, suppose you are developing a Windows software which requires "Print document" functionality. Now, this complex functionality has already been implemented by Microsoft. Microsoft doesn't want to give you the Windows source code, but wants to make it easy for you to develop applications for their OS. So, it makes available a set of APIs. You can provide Windows information like "What to print?" -- Windows will do the actual job of sending the document to the printer, and tell you whether it was successful or not.
+
 > Similarly, Facebook wants you to develop interesting apps for its users. But, it cannot risk sharing all the details of its users with you (privacy/security concerns, you can create a competing social network with this information etc.). So, it makes available an API instead.
 
 ## Dad Jokes API
