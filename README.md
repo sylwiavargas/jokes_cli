@@ -1,5 +1,17 @@
 # Joke App Source Code
 
+## Table of contents:
+- [Learning goals 📚](#learning-goals)
+- [Outline 🗺](#outline)
+- [Spider quiz 🕷](#spider-quiz)
+- [Domain model ⿻](#domain-model)
+- [Easy definitions 📖](#easy-definitions)
+- [Dad Jokes API 🤡](#dad-jokes-api)
+- [More APIs 👾](#more-apis)
+- [Read more 🤓](#read-more)
+
+---
+
 ## Learning goals
 * [ ] Recognize the parts of the request-response lifecycle:
     * [ ] Define client and describe setting up the request
@@ -13,13 +25,19 @@
 * [ ] Experience the process of making a POST request through web scraping
 
 ## Outline
-- Spider quiz 🕷
+- [Spider quiz 🕷](#spider-quiz)
 - Codebase questions time
 - Intro to the Internet
 - Dad Jokes API docs
 - Let's bring in some jokes to our app!
 - Not enough jokes? Let's release a crawling spider! 
 - Black Mirror accent
+
+## Spider quiz:
+- `cd ./starter_kit`
+- `rake spider`
+- in breakout rooms, discuss and fill out the prompts and general code organization
+- do not close the CLI, just follow the prompts
 
 ### Domain model
 ![](jokeApp.png)
@@ -50,16 +68,16 @@ User -< UserJoke >- Joke
 > For example, suppose you are developing a Windows software which requires "Print document" functionality. Now, this complex functionality has already been implemented by Microsoft. Microsoft doesn't want to give you the Windows source code, but wants to make it easy for you to develop applications for their OS. So, it makes available a set of APIs. You can provide Windows information like "What to print?" -- Windows will do the actual job of sending the document to the printer, and tell you whether it was successful or not.
 > Similarly, Facebook wants you to develop interesting apps for its users. But, it cannot risk sharing all the details of its users with you (privacy/security concerns, you can create a competing social network with this information etc.). So, it makes available an API instead.
 
-### Dad Jokes API
+## Dad Jokes API
 - [Dad Jokes API Docs](https://icanhazdadjoke.com/api)
 - [Sample API Request](https://icanhazdadjoke.com/api#fetch-a-random-dad-joke)
 
-### More APIs
+## More APIs
 - [More APIs](https://rapidapi.com/collection/cool-apis)
 - [And even more APIs](https://medium.com/@vicbergquist/18-fun-apis-for-your-next-project-8008841c7be9)
 
 
 ## Read more
-- patient [web scraping walkthrough by Sylwia](https://www.scrapingbee.com/blog/web-scraping-ruby/)
-- read Eric the Dad's blog [on ancestry, inheritance and modules in Ruby](https://medium.com/@hyeokjungkim/ruby-ancestry-d7f5d808e7d7)
+- Sylwia's patient [web scraping walkthrough](https://www.scrapingbee.com/blog/web-scraping-ruby/)
+- Eric the Dad's blog [on ancestry, inheritance and modules in Ruby](https://medium.com/@hyeokjungkim/ruby-ancestry-d7f5d808e7d7)
 - Explain it like I'm 5: [api by nick nish](https://www.nicknish.co/blog/explain-it-like-im-5-api)
