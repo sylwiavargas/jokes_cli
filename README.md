@@ -8,7 +8,8 @@
 - [Easy definitions 📖](#easy-definitions)
 - [Dad Jokes API 🤡](#dad-jokes-api)
 - [More APIs 👾](#more-apis)
-- [Pseudocoding requests 💻](#pseudocoding-requests)
+- [Pseudocoding standard requests 💻](#pseudocoding-standard-requests)
+- [Pseudocoding other requests 💻](#pseudocoding-other-requests)
 - [Pseudocoding scraping 🖥](#pseudocoding-scraping)
 - [Read more 🤓](#read-more)
 
@@ -52,6 +53,9 @@ User -< UserJoke >- Joke
 * **Response:** server's reaction to your request
 * **Client:** the person or bot that makes the request
 * **Server:** the destination of the request
+* **URI:** a website locator, a broader term for URL
+* **URL:** a type of URI
+* **JSON:** JavaScript Object Notation, or JS syntax for objects (hashes)
 * **API:**
 > Suppose you're the HR manager of a company, and Mr. XYZ has applied to your company. In his resume, he has stated that he achieved the highest score in the subjects "Machine Learning" and "Natural Language Processing" while pursuing his bachelors in Computer Science.
 
@@ -89,7 +93,21 @@ User -< UserJoke >- Joke
 - [More APIs](https://rapidapi.com/collection/cool-apis)
 - [And even more APIs](https://medium.com/@vicbergquist/18-fun-apis-for-your-next-project-8008841c7be9)
 
-## Pseudocoding requests
+## Pseudocoding other requests
+1. save the response to a variable
+    ```ruby
+        response = RestClient.get(url)
+    ```
+2. save the response body to a variable
+    ```ruby
+        body = response.body
+    ```
+3. convert the body into a hash
+    ```ruby
+        parsed = JSON.parse(body)
+    ```
+
+## Pseudocoding other requests
 1. parse the URL
     ```ruby
         uri = URI.parse(url)

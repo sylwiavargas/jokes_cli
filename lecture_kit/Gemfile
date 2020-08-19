@@ -20,5 +20,5 @@ gem "tty-prompt"
 gem "colorize"
 
 # internet connections
-gem "rest-client"
 gem "kimurai"
+gem "httparty"

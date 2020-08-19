@@ -37,6 +37,7 @@ class JokeApp
 
   def get_joke(subject)    
     system 'clear'
+    binding.pry
     # get a random joke or find a joke that contains subject
     subject.downcase == "random" ? joke = Joke.all.sample : joke = Joke.where("content LIKE ?", "%" + subject + "%").sample
     # if the response is nil or not:
