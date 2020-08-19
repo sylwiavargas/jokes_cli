@@ -37,7 +37,7 @@
 - Black Mirror accent
 
 ## Spider quiz:
-- `brew cask install chromedriver` (or, if that errors out: `brew install chromedriver`)
+- `brew cask install chromedriver` (or, if that errors out: brew install chromedriver)
 - `cd ./starter_kit`
 - `rake spider`
 - in breakout rooms, discuss and fill out the prompts and general code organization
@@ -94,7 +94,7 @@ User -< UserJoke >- Joke
 - [More APIs](https://rapidapi.com/collection/cool-apis)
 - [And even more APIs](https://medium.com/@vicbergquist/18-fun-apis-for-your-next-project-8008841c7be9)
 
-## Pseudocoding other requests
+## Pseudocoding standard requests
 1. save the response to a variable
     ```ruby
         response = RestClient.get(url)
